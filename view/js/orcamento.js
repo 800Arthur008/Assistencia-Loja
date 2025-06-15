@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // --- Field Validations ---
-
         if (fields.name.value.trim() === '') {
             isValid = false;
             showError(fields.name, document.getElementById('nameError'));
@@ -94,15 +93,35 @@ document.addEventListener('DOMContentLoaded', function() {
         successMessage.style.display = 'none';
 
         if (validateForm()) {
-            successMessage.textContent = '✅ Orçamento solicitado com sucesso! Entraremos em contato em breve pelo WhatsApp.';
-            successMessage.style.display = 'block';
-            form.reset();
-            charCounter.textContent = `0 / ${maxLength}`; // Reset counter text
+            // Número de WhatsApp da assistência técnica
+            const numeroWhatsapp = '5588981342993'; // Seu número.
 
-            setTimeout(() => {
-                successMessage.style.display = 'none';
-            }, 5000);
-            
+            // Coleta os dados do formulário
+            const nome = fields.name.value.trim();
+            const contato = fields.phone.value.trim();
+            const marca = fields.marca.value.trim();
+            const modelo = fields.modelo.value.trim();
+            const problema = fields.service.options[fields.service.selectedIndex].text;
+            const descricao = fields.description.value.trim();
+
+            // Formata a mensagem para o WhatsApp
+            const mensagem = `*Novo Pedido de Orçamento - Art Tech*
+
+*Nome:* ${nome}
+*Contato:* ${contato}
+*Aparelho:* ${marca} - ${modelo}
+*Problema Principal:* ${problema}
+
+*Descrição:*
+${descricao}`;
+
+            // --- MUDANÇA PRINCIPAL AQUI ---
+            // Cria o link usando a API oficial e redireciona a página atual
+            const linkWhatsapp = `https://api.whatsapp.com/send?phone=${numeroWhatsapp}&text=${encodeURIComponent(mensagem)}`;
+
+            // Redireciona a página atual para o WhatsApp. É mais robusto que abrir nova aba.
+            window.location.href = linkWhatsapp;
+
         } else {
             console.log('Form validation failed.');
         }
