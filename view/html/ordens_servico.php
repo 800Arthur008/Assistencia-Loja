@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     
     <!-- Folha de Estilos Local -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/ordens_servico.css">
 </head>
 <body>
 
@@ -136,6 +136,6 @@
     </div>
 
     <!-- Script Local -->
-    <script src="script.js" defer></script>
+    <script src="../js/ordens_servico.js" defer></script>
 </body>
 </html>
