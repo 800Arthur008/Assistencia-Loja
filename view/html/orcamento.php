@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento para Conserto de Celular - Art Tech</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="../css/orcamento.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="form-header">
+            <h2 class="brand-name">Art Tech</h2>
+            <h1>Orçamento para Conserto de Celular</h1>
+            <p>Descreva o problema do seu aparelho para receber uma cotação.</p>
+        </div>
+
+        <form id="quoteForm" novalidate>
+            <!-- Form Group for Name -->
+            <div class="form-group">
+                <label for="name">Seu Nome</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Ex: João da Silva" required>
+                <div class="error-message" id="nameError">O nome é obrigatório.</div>
+            </div>
+
+            <!-- Form Group for Phone -->
+            <div class="form-group">
+                <label for="phone">Seu WhatsApp / Telefone</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="(XX) XXXXX-XXXX" required>
+                 <div class="error-message" id="phoneError">O telefone é obrigatório para contato.</div>
+            </div>
+            
+            <!-- Form Group for Brand -->
+            <div class="form-group">
+                <label for="marca">Marca do Aparelho</label>
+                <input type="text" id="marca" name="marca" class="form-input" placeholder="Ex: Apple, Samsung, Xiaomi" required>
+                <div class="error-message" id="marcaError">A marca do aparelho é obrigatória.</div>
+            </div>
+
+            <!-- Form Group for Model -->
+            <div class="form-group">
+                <label for="modelo">Modelo do Aparelho</label>
+                <input type="text" id="modelo" name="modelo" class="form-input" placeholder="Ex: iPhone 13, Galaxy S22, Redmi Note 11" required>
+                 <div class="error-message" id="modeloError">O modelo do aparelho é obrigatório.</div>
+            </div>
+
+
+            <!-- Form Group for Service Type -->
+            <div class="form-group">
+                <label for="service">Qual o principal problema?</label>
+                <select id="service" name="service" class="form-select" required>
+                    <option value="" disabled selected>Selecione o defeito...</option>
+                    <option value="tela-quebrada">Tela Quebrada / Display Danificado</option>
+                    <option value="bateria">Bateria (não segura carga, viciada)</option>
+                    <option value="nao-liga">Aparelho não liga ou não carrega</option>
+                    <option value="dano-liquido">Dano por Líquido</option>
+                    <option value="camera">Problemas na Câmera (frontal ou traseira)</option>
+                    <option value="software">Problemas de Software / Travamentos</option>
+                    <option value="outro">Outro / Não sei informar</option>
+                </select>
+                <div class="error-message" id="serviceError">Por favor, selecione uma opção.</div>
+            </div>
+
+            <!-- Form Group for Project Description -->
+            <div class="form-group">
+                <label for="description">Descreva o problema com mais detalhes</label>
+                <textarea id="description" name="description" class="form-textarea" placeholder="Ex: Meu iPhone 11 caiu e a tela trincou no canto. O touch ainda funciona, mas com falhas." required maxlength="500"></textarea>
+                <div id="charCounter" class="char-counter">0 / 500</div>
+                <div class="error-message" id="descriptionError">Uma breve descrição é necessária.</div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Pedir Orçamento</button>
+            
+             <!-- Success Message Placeholder -->
+            <div id="successMessage"></div>
+        </form>
+    </div>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="../js/orcamento.js"></script>
+</body>
+</html>

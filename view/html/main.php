@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Tech - Assistência Técnica e Loja Online</title>
+    
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link para o arquivo JavaScript (defer garante que ele carregue após o HTML) -->
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- CABEÇALHO E NAVEGAÇÃO -->
+    <header class="header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <a href="#" class="logo">Art<span>Tech</span></a>
+            
+            <!-- Navegação para Desktop -->
+            <nav class="nav-desktop">
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#loja">Loja Online</a>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#contato" class="nav-button">Contato</a>
+            </nav>
+            
+            <!-- Botão de Menu para Mobile -->
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <!-- Ícone do menu (Hamburguer) -->
+                <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <nav id="mobile-menu" class="nav-mobile">
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#loja">Loja Online</a>
+            <a href="#sobre">Sobre Nós</a>
+            <a href="#contato" class="nav-button">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEÇÃO HERO (PRINCIPAL) -->
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+                <h1>Seu celular novo, de novo.</h1>
+                <p>Reparo rápido e venda de smartphones com a agilidade que você precisa.</p>
+                <div class="hero-buttons">
+                    <a href="orcamento.php" class="button button-primary">Faça um Orçamento Grátis</a>
+                    <a href="#loja" class="button button-secondary">Visite Nossa Loja</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE SERVIÇOS -->
+        <section id="servicos" class="section">
+            <div class="container">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">Soluções completas para seu dispositivo.</p>
+                <div class="services-grid">
+                    <!-- Card Assistência -->
+                    <div class="card">
+                        <h3 class="card-title">Assistência Técnica</h3>
+                        <p class="card-description">Reparos por técnicos certificados com peças de alta qualidade e garantia.</p>
+                        <ul>
+                            <li>✓ Troca de tela e bateria</li>
+                            <li>✓ Reparo em placa-mãe</li>
+                            <li>✓ Problemas de software</li>
+                            <li>✓ Limpeza e desoxidação</li>
+                        </ul>
+                    </div>
+                    <!-- Card Loja Online -->
+                    <div id="loja" class="card">
+                        <h3 class="card-title">Loja Online</h3>
+                        <p class="card-description">Encontre smartphones novos, seminovos e os melhores acessórios.</p>
+                         <ul>
+                            <li>✓ Smartphones com garantia</li>
+                            <li>✓ Capas, películas e carregadores</li>
+                            <li>✓ Fones de ouvido e smartwatches</li>
+                            <li>✓ Entrega para todo o Brasil</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO "POR QUE ESCOLHER-NOS?" -->
+        <section id="sobre" class="section section-light">
+            <div class="container">
+                <h2 class="section-title">Por que escolher a Art Tech?</h2>
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature">
+                        <div class="feature-icon">🏆</div>
+                        <h3 class="feature-title">Técnicos Certificados</h3>
+                        <p>Profissionais qualificados para cuidar bem do seu aparelho.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature">
+                        <div class="feature-icon">🚀</div>
+                        <h3 class="feature-title">Atendimento Rápido</h3>
+                        <p>Orçamento e reparo realizados em tempo recorde.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature">
+                        <div class="feature-icon">🛡️</div>
+                        <h3 class="feature-title">Garantia Total</h3>
+                        <p>Sua satisfação e segurança em primeiro lugar.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="feature">
+                        <div class="feature-icon">💰</div>
+                        <h3 class="feature-title">Preço Justo</h3>
+                        <p>Transparência total, sem surpresas na hora de pagar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- RODAPÉ -->
+    <footer id="contato" class="footer">
+        <div class="container footer-grid">
+            <!-- Sobre a Empresa -->
+            <div class="footer-col">
+                <h3 class="logo">Art<span>Tech</span></h3>
+                <p>Sua melhor opção em reparo e venda de celulares. Tecnologia e arte em cuidar do seu dispositivo.</p>
+            </div>
+            <!-- Contato -->
+            <div class="footer-col">
+                <h4>Entre em Contato</h4>
+                <ul>
+                    <li>(88) 98134-2993</li>
+                    <li>contato@arttech.com.br</li>
+                    <li>Avenida Ailton Gomes, 1560 - Pirajá</li>
+                </ul>
+            </div>
+            <!-- Redes Sociais -->
+            <div class="footer-col">
+                <h4>Siga-nos</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/art_tech_ofc/" target="_blank" >Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="https://wa.me/5588981342993?text=Ol%C3%A1%2C%20quero%20fazer%20um%20or%C3%A7amento!%0A%0A" target="_blank" >WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Art Tech. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

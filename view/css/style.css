@@ -1,0 +1,328 @@
+/* --- RESET BÁSICO E CONFIGURAÇÕES GLOBAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --primary-blue: #2563eb;
+    --dark-blue: #1e3a8a;
+    --light-blue: #3b82f6;
+    --dark-gray: #1f2937;
+    --medium-gray: #4b5563;
+    --light-gray: #f3f4f6;
+    --white: #ffffff;
+    --text-color: #333;
+    --text-light: #f9fafb;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- CABEÇALHO (HEADER) --- */
+.header {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.logo span {
+    color: var(--dark-gray);
+}
+
+.nav-desktop a {
+    color: var(--medium-gray);
+    font-weight: 500;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-desktop a:hover {
+    color: var(--primary-blue);
+}
+
+/* --- ESTILO DO BOTÃO DE CONTATO ATUALIZADO --- */
+.nav-button {
+    background-color: transparent;
+    color: var(--primary-blue);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border: 2px solid var(--primary-blue);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* CORREÇÃO: Aumentada a especificidade do seletor para garantir a sobreposição correta no hover */
+a.nav-button:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+}
+
+/* --- MENU MOBILE --- */
+.mobile-menu-button {
+    display: none; /* Escondido por padrão */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-mobile {
+    display: none; /* Escondido por padrão */
+    flex-direction: column;
+    padding: 1rem 2rem 2rem;
+    border-top: 1px solid var(--light-gray);
+}
+
+.nav-mobile a {
+    color: var(--medium-gray);
+    padding: 0.8rem 0;
+    font-weight: 500;
+}
+
+.nav-mobile .nav-button {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.nav-mobile.active {
+    display: flex; /* Mostra o menu quando a classe 'active' é adicionada */
+}
+
+/* --- SEÇÃO HERO --- */
+.hero {
+    color: var(--white);
+    text-align: center;
+    padding: 6rem 0;
+    background: linear-gradient(-45deg, var(--dark-blue), var(--primary-blue), var(--light-blue), var(--dark-blue));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.button-primary {
+    background-color: var(--white);
+    color: var(--primary-blue);
+}
+
+.button-secondary {
+    background-color: var(--light-blue);
+    color: var(--white);
+}
+
+/* --- SEÇÕES PADRÃO --- */
+.section {
+    padding: 5rem 0;
+}
+
+.section-light {
+    background-color: var(--light-gray);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--medium-gray);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+/* --- GRIDS DE SERVIÇOS E FEATURES --- */
+.services-grid, .features-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+/* Card de Serviço */
+.card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-blue);
+}
+
+.card-description {
+    color: var(--medium-gray);
+    margin-bottom: 1.5rem;
+}
+
+.card ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Feature */
+.feature {
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* --- RODAPÉ (FOOTER) --- */
+.footer {
+    background-color: var(--dark-gray);
+    color: var(--light-gray);
+    padding-top: 4rem;
+}
+
+.footer-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer .logo span {
+    color: var(--light-blue);
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.footer-col p, .footer-col li {
+    color: #adb5bd;
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: #adb5bd;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: var(--primary-blue);
+}
+
+
+.footer-bottom {
+    border-top: 1px solid var(--medium-gray);
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #adb5bd;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-desktop {
+        display: none;
+    }
+    .mobile-menu-button {
+        display: block;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
